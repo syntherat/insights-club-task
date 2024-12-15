@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Insights Club</title>
+    <link rel="icon" type="image/x-icon" href="https://firebasestorage.googleapis.com/v0/b/fusion-appointment.appspot.com/o/insights%20club%20favicon%2Ffavicon.png?alt=media&token=e44f12ee-ba63-4f0d-a716-8d17b8fc9ae0">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html">
+            <img class="logo" src="../assets/images/insights_club_dp.png" alt="Insights Club Logo">
+        </a>
+        <div class="main-container">
+            <h1 id="title">Register</h1>
+            <form id="register" onsubmit="return validate()">
+                <div class="input-group">
+                    <div class="input-field">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/user.png" alt="user" id="name"/>
+                        <input type="text" placeholder="First Name" id="firstName" required>
+                    </div>
+                    <div class="input-field">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/user.png" alt="user" id="name"/>
+                        <input type="text" placeholder="Last Name" id="lastName" required>
+                    </div>
+                    <div class="input-field">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="email"/>
+                        <input type="email" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="input-field">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/password.png" alt="password"/>
+                        <input type="password" placeholder="Password" id="password" required>
+                    </div>
+                    <div class="input-field">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/password.png" alt="confirm password"/>
+                        <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
+                    </div>
+                    <div id="error" class="error disable"><p></p></div>
+                    <p>Already have an account? <a href="./login.html">Login</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validate() {
+            const passwordField = document.getElementById("password").value;
+            const cnfPasswordField = document.getElementById("confirmPassword").value;
+            const emailField = document.getElementById("email").value;
+            const minLength = 6; 
+            const errorDiv = document.getElementById("error");
+            const errorMessage = errorDiv.querySelector("p");
+
+            errorDiv.classList.add("disable");
+            errorMessage.textContent = "";
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (passwordField.length < minLength) {
+                errorMessage.textContent = `Password must be at least ${minLength} characters long.`;
+                errorDiv.classList.remove("disable");
+                return false;
+            }
+
+            if (passwordField !== cnfPasswordField) {
+                errorMessage.textContent = "Passwords do not match.";
+                errorDiv.classList.remove("disable");
+                return false;
+            }
+
+            if (!emailPattern.test(emailField)) {
+                errorMessage.textContent = "Please enter a valid email address.";
+                errorDiv.classList.remove("disable");
+                return false;
+            }
+
+            window.location.href = "./login.html";
+            return false;
+        }
+    </script>
+</body>
+</html>

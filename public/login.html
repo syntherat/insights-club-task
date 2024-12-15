@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Insights Club</title>
+    <link rel="icon" type="image/x-icon" href="https://firebasestorage.googleapis.com/v0/b/fusion-appointment.appspot.com/o/insights%20club%20favicon%2Ffavicon.png?alt=media&token=e44f12ee-ba63-4f0d-a716-8d17b8fc9ae0">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html">
+            <img class="logo" src="../assets/images/insights_club_dp.png" alt="Insights Club Logo">
+        </a>
+        <div class="main-container">
+            <h1 id="title">Login</h1>
+            <form id="login" onsubmit="return validateLogin()">
+                <div class="input-group">
+                    <div class="input-field">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/user.png" alt="user"/>
+                        <input type="email" placeholder="Email" id="email" required>
+                    </div>
+                    <div class="input-field">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/password.png" alt="password"/>
+                        <input type="password" placeholder="Password" id="password" required>
+                    </div>
+                    <div id="error" class="error disable"><p>*Please fill in both fields</p></div>
+                    <div id="emailError" class="error disable"><p style="color: red;">*Invalid email format</p></div>
+                    <p>Don't have an account? <a href="./register.html">Register</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const emailField = document.getElementById("email").value;
+            const passwordField = document.getElementById("password").value;
+            
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailField === "" || passwordField === "") {
+                document.getElementById("error").classList.remove("disable");
+                document.getElementById("emailError").classList.add("disable");
+                return false; 
+            } else {
+                document.getElementById("error").classList.add("disable");
+            }
+
+            if (!emailPattern.test(emailField)) {
+                document.getElementById("emailError").classList.remove("disable");
+                return false; 
+            } else {
+                document.getElementById("emailError").classList.add("disable");
+            }
+
+            window.location.href = "../index.html"; 
+            return false;
+        }
+    </script>
+</body>
+</html>

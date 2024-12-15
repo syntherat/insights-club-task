@@ -96,3 +96,9 @@ form p a{
 .disable {
     display: none;
 }
+
+@media (min-width: 319px) and (max-width: 750px) {
+    .main-container {
+        padding: 50px 40px 50px;
+    }
+}

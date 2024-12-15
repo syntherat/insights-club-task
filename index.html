@@ -20,6 +20,14 @@
             <a href="#">Events</a>
             <a href="./public/login.html">Login</a>
         </div>
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a class="active" href="./index.html">Home</a>
+                <a href="#">Events</a>
+                <a href="./public/login.html">Login</a>
+            </div>
+        </div>
     </div>
     <div class="cover-head">
         <h1>The Insights Club</h1>
@@ -33,5 +41,11 @@
     <div class="footer">
         <p>&copy; Copyright @ The Insights Club</p>
     </div>
+    <script>
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>

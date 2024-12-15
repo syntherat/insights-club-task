@@ -1,4 +1,4 @@
-# Web Application Project
+# Insights Club Task - Sounak Pal(23BAI10467)
 
 ## Description
 This project is a simple web application designed for The Insights Club of VIT Bhopal to showcase basic UI/UX design and functionality. The application includes:
@@ -33,7 +33,7 @@ This project is a simple web application designed for The Insights Club of VIT B
 ---
 
 ## Webpage Preview
-- **Webpage:** [The Insights Club](http://localhost:8080)
+- **Webpage:** [https://syntherat.github.io/insights-club-task/index.html](https://syntherat.github.io/insights-club-task/index.html)
 
 ---
 
@@ -65,5 +65,3 @@ This project is a simple web application designed for The Insights Club of VIT B
 
 ## Credits
 Designed and developed by Sounak Pal(23BAI10467) as a task for the Insights Club of VIT Bhopal.
-
-# insights-club-task

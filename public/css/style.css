@@ -1,0 +1,302 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/pexels-suzyhazelwood-1995842.jpg");
+    background-size: cover;
+}
+
+#navbar img {
+    width: 70px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+    margin-top: 15px;
+}
+
+.navList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.navList a{
+    text-decoration: none;
+    color: rgb(187, 187, 187);
+    top: 40px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.navList a.active {
+    color: white;
+}
+
+.cover-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 10% 30% 16%;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 0;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+.cover-head p{
+    margin: 15px 10px;
+    line-height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+button{
+    padding: 10px 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    border-radius: 7px;
+    border: none;
+    margin-top: 5px;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(187, 187, 187);
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (min-width: 319px) and (max-width: 750px) {
+    #navbar {
+        gap: 100px;
+    }
+
+    .navList {
+        display: none;
+    }
+    .dropdown {
+        display: block;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .cover-head{
+        margin: 50% 5% 80%;
+    }
+
+    .cover-head p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1200px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .cover-head{
+        margin: 35% 20% 32%;
+    }
+
+    .cover-head p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+    h1 {
+       font-size: 3rem; 
+    }
+
+    .cover-head p{
+        font-size: 18px;
+    }
+
+    button{
+        padding: 10px 20px;
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 15px;
+        border-radius: 7px;
+        border: none;
+        margin-top: 5px;
+    }
+
+    .cover-head{
+        margin: 15% 30% 21%;
+    }
+}
+
+@media (min-width: 1601px) {
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/pexels-suzyhazelwood-1995842.jpg");
+        background-size: cover;
+    }
+    
+    #navbar img {
+        width: 70px;
+    }
+    
+    #navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 300px;
+        margin-top: 15px;
+    }
+    
+    .navList{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .navList a{
+        text-decoration: none;
+        color: rgb(187, 187, 187);
+        top: 40px;
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+    }
+    
+    .navList a.active {
+        color: white;
+    }
+    
+    .cover-head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 10% 30% 16%;
+        text-align: center;
+    }
+    
+    h1{
+        margin-bottom: 0;
+        font-family: "Lexend", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 4rem;
+    }
+    
+    .cover-head p{
+        margin: 15px 10px;
+        line-height: 30px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        font-style: normal;
+    }
+    
+    button{
+        padding: 10px 20px;
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+        border-radius: 7px;
+        border: none;
+        margin-top: 5px;
+    }
+    
+    .footer {
+        color: white;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .dropdown {
+        display: none;
+    }
+    
+    .dropbtn {
+        background-color: transparent;
+        color: rgb(187, 187, 187);
+        font-family: "Kanit", sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        min-width: 160px;
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+}
